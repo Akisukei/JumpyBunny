@@ -2,36 +2,77 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class BunnyController : MonoBehaviour {
 
     private Rigidbody2D bunnyRigidBody;
     private Animator bunnyAnimator;
+    private Collider2D bunnyCollider;
+
+    private float bunnyHurtTime = -1;
+    private float startingTime;
 
     public float jumpForce = 100f;
+    public Text scoreTxt;
 
 	// Use this for initialization
 	void Start ()
     {
         this.bunnyRigidBody = GetComponent<Rigidbody2D>();
         this.bunnyAnimator = GetComponent<Animator>();
+        this.bunnyCollider = GetComponent<Collider2D>();
+
+        startingTime = Time.time;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if(Input.GetButtonUp("Jump")) {
-            bunnyRigidBody.AddForce(transform.up * jumpForce);
+        if (bunnyHurtTime == -1)
+        {
+            if (Input.GetButtonUp("Jump"))
+            {
+                bunnyRigidBody.AddForce(transform.up * jumpForce);
+            }
+
+            bunnyAnimator.SetFloat("vVelocity", Mathf.Abs(bunnyRigidBody.velocity.y));
+            scoreTxt.text = (Time.time - startingTime).ToString("0.0");
         }
-        
-        bunnyAnimator.SetFloat("vVelocity", Mathf.Abs(bunnyRigidBody.velocity.y));
+        else
+        {
+            if(Time.time > bunnyHurtTime + 2)   // after 2 seconds of hit
+            {
+                SceneManager.LoadScene("Game");
+            }
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.collider.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
-            SceneManager.LoadScene("Game");
+            bunnyHurtTime = Time.time;
+            
+            bunnyAnimator.SetBool("bunnyHit", true);
+
+            bunnyCollider.enabled = false;
+            bunnyRigidBody.velocity = Vector2.zero;
+            bunnyRigidBody.AddForce(transform.up * jumpForce);
+
+            disableObstacles(); 
+        }
+    }
+
+    private void disableObstacles()
+    {
+        foreach(PrefabSpawner spawner in FindObjectsOfType<PrefabSpawner>())
+        {
+            spawner.enabled = false;
+        }
+        foreach(MoveLeft moveLeft in FindObjectsOfType<MoveLeft>())
+        {
+            moveLeft.enabled = false;
         }
     }
 }

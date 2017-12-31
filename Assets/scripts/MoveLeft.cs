@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveLeft : MonoBehaviour {
 
-    public int speed = 10;
+    public int speed = 7;
 
 	// Use this for initialization
 	void Start () {
