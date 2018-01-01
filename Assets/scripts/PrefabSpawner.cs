@@ -5,14 +5,16 @@ using UnityEngine;
 public class PrefabSpawner : MonoBehaviour {
 
     private float nextSpawnTime = 0;
+    private float startTime;
+    private float jitter = 0.25f;
 
     public Transform[] prefabs;
-    public float spawnRate = 1;
-    public float randomDelay = 1;
+    public AnimationCurve spawnCurve;
+    public float curveLengthInSecs = 30f;
 
 	// Use this for initialization
 	void Start () {
-
+        this.startTime = Time.time;
 	}
 	
 	// Update is called once per frame
@@ -23,8 +25,14 @@ public class PrefabSpawner : MonoBehaviour {
             if(prefabs.Length > 0) {
                 Instantiate(prefabs[Random.Range(0, prefabs.Length)], transform.position, Quaternion.identity);
             }
-           
-            nextSpawnTime = Time.time + spawnRate + Random.Range(0, randomDelay);
+
+            float curvePositionX = (Time.time - startTime) / curveLengthInSecs;
+            if(curvePositionX > 1f)
+            {
+                curvePositionX = 1f;
+            }
+
+            nextSpawnTime = Time.time + spawnCurve.Evaluate(curvePositionX) + Random.Range(-jitter, jitter);
         }
 	}
 }
