@@ -43,7 +43,7 @@ public class BunnyController : MonoBehaviour {
                 bunnyRigidBody.AddForce(transform.up * jumpForce);
             }
 
-            bunnyAnimator.SetFloat("vVelocity", Mathf.Abs(bunnyRigidBody.velocity.y));
+            bunnyAnimator.SetFloat("vVelocity", bunnyRigidBody.velocity.y);
             scoreTxt.text = (Time.time - startingTime).ToString("0.0");
         }
         else

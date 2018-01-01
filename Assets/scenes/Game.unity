@@ -162,9 +162,82 @@ Prefab:
       propertyPath: m_Name
       value: TerrainGrass (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab6cfcade226286458e69239f510004e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &119041411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 119041413}
+  - component: {fileID: 119041412}
+  m_Layer: 0
+  m_Name: CloudSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &119041412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 119041411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117cde9b383f5ab40a5b40e3898da015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 4682063594590402, guid: 65eb40861b7edcf45b0d6ed7b0ad971a, type: 2}
+  - {fileID: 4521816323860270, guid: a63188d06b138a64197726e33c089316, type: 2}
+  spawnCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 10
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.5
+      value: 15
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 10
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  curveLengthInSecs: 60
+  jitter: 5
+--- !u!4 &119041413
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 119041411}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.0579672, y: 1.8536268, z: 0.07421875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1809819363}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &139430721
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,6 +312,105 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 139430721}
+--- !u!1 &156657228
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 156657229}
+  - component: {fileID: 156657230}
+  m_Layer: 0
+  m_Name: CastleSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &156657229
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 156657228}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.0599995, y: -4.22, z: 0.07421875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1809819363}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &156657230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 156657228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117cde9b383f5ab40a5b40e3898da015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 4688341455530124, guid: 2e104bf60d3a38744a7ae39057bbc25d, type: 2}
+  - {fileID: 4369478085059342, guid: 0ef69cd7a3dc11a40889a50d873b402d, type: 2}
+  spawnCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 20
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.2
+      value: 0.75
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.3
+      value: 0.75
+      inSlope: -0.000015466709
+      outSlope: -0.000015466709
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.4
+      value: 15
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.6
+      value: 15
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.7
+      value: 0.75
+      inSlope: 0.011607985
+      outSlope: 0.011607985
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.8
+      value: 0.75
+      inSlope: -0.011232003
+      outSlope: -0.011232003
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 20
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  curveLengthInSecs: 30
+  jitter: 0.25
 --- !u!1001 &163552420
 Prefab:
   m_ObjectHideFlags: 0
@@ -287,6 +459,10 @@ Prefab:
     - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
       propertyPath: m_Name
       value: TerrainGrass (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab6cfcade226286458e69239f510004e, type: 2}
@@ -350,6 +526,10 @@ Prefab:
       propertyPath: m_Name
       value: TerrainGrass (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab6cfcade226286458e69239f510004e, type: 2}
   m_IsPrefabParent: 0
@@ -402,6 +582,10 @@ Prefab:
       propertyPath: m_Name
       value: TerrainGrass (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab6cfcade226286458e69239f510004e, type: 2}
   m_IsPrefabParent: 0
@@ -420,7 +604,7 @@ GameObject:
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &260085288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,18 +704,19 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 0
   curveLengthInSecs: 30
+  jitter: 0.25
 --- !u!4 &260085289
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 260085287}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: -3, z: -0.115234375}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.0279675, y: -4.556373, z: -0.041015625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 1809819363}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &275054567
 GameObject:
@@ -609,7 +794,7 @@ CanvasRenderer:
   m_GameObject: {fileID: 275054567}
 --- !u!4 &325747284 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 4750292655679176, guid: ab6cfcade226286458e69239f510004e,
+  m_PrefabParentObject: {fileID: 4679274856380274, guid: 6b36a9bd40e130249ae6a5f96e6f89c5,
     type: 2}
   m_PrefabInternal: {fileID: 599925311}
 --- !u!1001 &484492875
@@ -660,6 +845,10 @@ Prefab:
     - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
       propertyPath: m_Name
       value: TerrainGrass (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab6cfcade226286458e69239f510004e, type: 2}
@@ -713,6 +902,10 @@ Prefab:
       propertyPath: m_Name
       value: TerrainGrass (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab6cfcade226286458e69239f510004e, type: 2}
   m_IsPrefabParent: 0
@@ -724,7 +917,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 555941178}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TerrainGrass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -760,7 +953,7 @@ Transform:
   - {fileID: 944117205}
   - {fileID: 2040814573}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &566146765
 Prefab:
@@ -811,6 +1004,10 @@ Prefab:
       propertyPath: m_Name
       value: TerrainGrass (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab6cfcade226286458e69239f510004e, type: 2}
   m_IsPrefabParent: 0
@@ -826,50 +1023,40 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 555941178}
     m_Modifications:
-    - target: {fileID: 4750292655679176, guid: ab6cfcade226286458e69239f510004e, type: 2}
+    - target: {fileID: 4679274856380274, guid: 6b36a9bd40e130249ae6a5f96e6f89c5, type: 2}
       propertyPath: m_LocalPosition.x
       value: -21.76
       objectReference: {fileID: 0}
-    - target: {fileID: 4750292655679176, guid: ab6cfcade226286458e69239f510004e, type: 2}
+    - target: {fileID: 4679274856380274, guid: 6b36a9bd40e130249ae6a5f96e6f89c5, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4750292655679176, guid: ab6cfcade226286458e69239f510004e, type: 2}
+    - target: {fileID: 4679274856380274, guid: 6b36a9bd40e130249ae6a5f96e6f89c5, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4750292655679176, guid: ab6cfcade226286458e69239f510004e, type: 2}
+    - target: {fileID: 4679274856380274, guid: 6b36a9bd40e130249ae6a5f96e6f89c5, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4750292655679176, guid: ab6cfcade226286458e69239f510004e, type: 2}
+    - target: {fileID: 4679274856380274, guid: 6b36a9bd40e130249ae6a5f96e6f89c5, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4750292655679176, guid: ab6cfcade226286458e69239f510004e, type: 2}
+    - target: {fileID: 4679274856380274, guid: 6b36a9bd40e130249ae6a5f96e6f89c5, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4750292655679176, guid: ab6cfcade226286458e69239f510004e, type: 2}
+    - target: {fileID: 4679274856380274, guid: 6b36a9bd40e130249ae6a5f96e6f89c5, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4750292655679176, guid: ab6cfcade226286458e69239f510004e, type: 2}
+    - target: {fileID: 4679274856380274, guid: 6b36a9bd40e130249ae6a5f96e6f89c5, type: 2}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 212707670762062462, guid: ab6cfcade226286458e69239f510004e,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 01b2722daf111e04197b024e1762fe04,
-        type: 3}
-    - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
-      propertyPath: m_Name
-      value: TerrainGrass
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: ab6cfcade226286458e69239f510004e, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 6b36a9bd40e130249ae6a5f96e6f89c5, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &659170280
 GameObject:
@@ -931,7 +1118,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &725674601
 Prefab:
@@ -982,6 +1169,10 @@ Prefab:
       propertyPath: m_Name
       value: TerrainGrass (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab6cfcade226286458e69239f510004e, type: 2}
   m_IsPrefabParent: 0
@@ -1000,6 +1191,193 @@ Transform:
   m_PrefabParentObject: {fileID: 4750292655679176, guid: ab6cfcade226286458e69239f510004e,
     type: 2}
   m_PrefabInternal: {fileID: 1109620054}
+--- !u!1 &922329497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 922329498}
+  - component: {fileID: 922329499}
+  m_Layer: 0
+  m_Name: HouseSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &922329498
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 922329497}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.0599995, y: -4.22, z: 0.07421875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1809819363}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &922329499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 922329497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117cde9b383f5ab40a5b40e3898da015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 4461130791475960, guid: 48865d79cfe1c0b4bb39f0f05fe26192, type: 2}
+  - {fileID: 4139068649929054, guid: 8fd9554233de71e488c8d8b60fd71631, type: 2}
+  - {fileID: 4785941266328114, guid: a453eee9f1076b446afbe635ad430846, type: 2}
+  spawnCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.1
+      value: 1
+      inSlope: 67.420006
+      outSlope: 67.420006
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.20019723
+      value: 10
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.35
+      value: 10
+      inSlope: -0.000018454695
+      outSlope: -0.000018454695
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.5
+      value: 0.5
+      inSlope: -0.09151354
+      outSlope: -0.09151354
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.65
+      value: 10
+      inSlope: 0.000019695046
+      outSlope: 0.000019695046
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.8
+      value: 10
+      inSlope: -0.000017974458
+      outSlope: -0.000017974458
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.9
+      value: 1
+      inSlope: -67.481995
+      outSlope: -67.481995
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  curveLengthInSecs: 30
+  jitter: 0.25
+--- !u!1 &926424259
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 926424261}
+  - component: {fileID: 926424260}
+  m_Layer: 0
+  m_Name: CloudSpawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &926424260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 926424259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117cde9b383f5ab40a5b40e3898da015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 4682063594590402, guid: 65eb40861b7edcf45b0d6ed7b0ad971a, type: 2}
+  - {fileID: 4521816323860270, guid: a63188d06b138a64197726e33c089316, type: 2}
+  spawnCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 10
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.25
+      value: 20
+      inSlope: -11.348724
+      outSlope: -11.348724
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.5
+      value: 10
+      inSlope: -33.769608
+      outSlope: -33.769608
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.75
+      value: 20
+      inSlope: -18.680096
+      outSlope: -18.680096
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 10
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  curveLengthInSecs: 60
+  jitter: 5
+--- !u!4 &926424261
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 926424259}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.6979675, y: 0.5336267, z: 0.07421875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1809819363}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &944117205 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4750292655679176, guid: ab6cfcade226286458e69239f510004e,
@@ -1059,6 +1437,10 @@ Prefab:
       propertyPath: m_Name
       value: TerrainGrass (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab6cfcade226286458e69239f510004e, type: 2}
   m_IsPrefabParent: 0
@@ -1110,6 +1492,10 @@ Prefab:
     - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
       propertyPath: m_Name
       value: TerrainGrass (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab6cfcade226286458e69239f510004e, type: 2}
@@ -1168,6 +1554,10 @@ Prefab:
       propertyPath: m_Name
       value: TerrainGrass (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab6cfcade226286458e69239f510004e, type: 2}
   m_IsPrefabParent: 0
@@ -1219,6 +1609,10 @@ Prefab:
     - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
       propertyPath: m_Name
       value: TerrainGrass (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab6cfcade226286458e69239f510004e, type: 2}
@@ -1283,12 +1677,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1161960757}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.96, y: 0.08, z: -0.111328125}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -27.992033, y: -1.5363733, z: -0.037109375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1809819363}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1161960761
 Rigidbody2D:
@@ -1334,7 +1728,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &1337399546
 Rigidbody2D:
   serializedVersion: 4
@@ -1410,7 +1804,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1337399549
 BoxCollider2D:
@@ -1448,7 +1842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6558f20a6b10d6419c9d1826fa6a2df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 700
+  jumpForce: 1000
   scoreTxt: {fileID: 275054569}
 --- !u!95 &1337399551
 Animator:
@@ -1467,6 +1861,81 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!1 &1357440702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1357440703}
+  - component: {fileID: 1357440704}
+  m_Layer: 0
+  m_Name: MountainSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1357440703
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1357440702}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.06, y: -4.16, z: 0.07421875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1809819363}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1357440704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1357440702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117cde9b383f5ab40a5b40e3898da015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 4855181319537726, guid: d3681f1b90b3cef4eae77dc428e30cb7, type: 2}
+  - {fileID: 4554089037930658, guid: 288c1b00e3bedae43a7b3e6c05c47b34, type: 2}
+  spawnCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.1
+      value: 15
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.5
+      value: 15
+      inSlope: -0.0573403
+      outSlope: -0.0573403
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  curveLengthInSecs: 60
+  jitter: 5
 --- !u!1001 &1382233728
 Prefab:
   m_ObjectHideFlags: 0
@@ -1515,6 +1984,10 @@ Prefab:
     - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
       propertyPath: m_Name
       value: TerrainGrass (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab6cfcade226286458e69239f510004e, type: 2}
@@ -1607,7 +2080,7 @@ RectTransform:
   - {fileID: 275054568}
   - {fileID: 139430722}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1663,6 +2136,10 @@ Prefab:
       propertyPath: m_Name
       value: TerrainGrass (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab6cfcade226286458e69239f510004e, type: 2}
   m_IsPrefabParent: 0
@@ -1715,6 +2192,10 @@ Prefab:
       propertyPath: m_Name
       value: TerrainGrass (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab6cfcade226286458e69239f510004e, type: 2}
   m_IsPrefabParent: 0
@@ -1759,7 +2240,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.4427984, g: 0.8464142, b: 0.9264706, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1858,6 +2339,10 @@ Prefab:
       propertyPath: m_Name
       value: TerrainGrass (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab6cfcade226286458e69239f510004e, type: 2}
   m_IsPrefabParent: 0
@@ -1910,6 +2395,10 @@ Prefab:
       propertyPath: m_Name
       value: TerrainGrass (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1121380183086210, guid: ab6cfcade226286458e69239f510004e, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab6cfcade226286458e69239f510004e, type: 2}
   m_IsPrefabParent: 0
@@ -1918,6 +2407,42 @@ Transform:
   m_PrefabParentObject: {fileID: 4750292655679176, guid: ab6cfcade226286458e69239f510004e,
     type: 2}
   m_PrefabInternal: {fileID: 1493233184}
+--- !u!1 &1809819362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1809819363}
+  m_Layer: 0
+  m_Name: Spawners
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1809819363
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1809819362}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.9720325, y: 1.5563732, z: -0.07421875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 260085289}
+  - {fileID: 1161960760}
+  - {fileID: 119041413}
+  - {fileID: 926424261}
+  - {fileID: 1357440703}
+  - {fileID: 2091404844}
+  - {fileID: 156657229}
+  - {fileID: 922329498}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1926963210 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4750292655679176, guid: ab6cfcade226286458e69239f510004e,
@@ -1938,3 +2463,102 @@ Transform:
   m_PrefabParentObject: {fileID: 4750292655679176, guid: ab6cfcade226286458e69239f510004e,
     type: 2}
   m_PrefabInternal: {fileID: 533712486}
+--- !u!1 &2091404843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2091404844}
+  - component: {fileID: 2091404845}
+  m_Layer: 0
+  m_Name: TreeSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2091404844
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2091404843}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.0599995, y: -4.34, z: 0.07421875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1809819363}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2091404845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2091404843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 117cde9b383f5ab40a5b40e3898da015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 4907313187626610, guid: ab727968978b10049819cc1fc7b8b731, type: 2}
+  - {fileID: 4877676872551716, guid: a3d15c8d817bf2447b8644a1f44a87b5, type: 2}
+  spawnCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.1
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.3
+      value: 0.5
+      inSlope: -0.000015466709
+      outSlope: -0.000015466709
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.4
+      value: 5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.6
+      value: 5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.7
+      value: 0.5
+      inSlope: 0.011607985
+      outSlope: 0.011607985
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.9
+      value: 0.5
+      inSlope: -0.011232003
+      outSlope: -0.011232003
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  curveLengthInSecs: 30
+  jitter: 0.25

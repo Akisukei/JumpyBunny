@@ -6,14 +6,14 @@ public class PrefabSpawner : MonoBehaviour {
 
     private float nextSpawnTime = 0;
     private float startTime;
-    private float jitter = 0.25f;
 
     public Transform[] prefabs;
     public AnimationCurve spawnCurve;
     public float curveLengthInSecs = 30f;
+    public float jitter = 0.25f;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         this.startTime = Time.time;
 	}
 	
