@@ -15,6 +15,9 @@ public class BunnyController : MonoBehaviour {
     private float startingTime;
 
     public float jumpForce = 100f;
+    public AudioSource jumpSfx1;
+    public AudioSource jumpSfx2;
+    public AudioSource gameOverSfx;
     public Text scoreTxt;
 
 	// Use this for initialization
@@ -37,6 +40,11 @@ public class BunnyController : MonoBehaviour {
                 if (jumpsRemaining == 1)
                 {
                     bunnyRigidBody.velocity = Vector2.zero;
+                    jumpSfx2.Play();
+                }
+                else
+                {
+                    jumpSfx1.Play();
                 }
 
                 jumpsRemaining--;
@@ -71,7 +79,9 @@ public class BunnyController : MonoBehaviour {
             bunnyRigidBody.velocity = Vector2.zero;
             bunnyRigidBody.AddForce(transform.up * jumpForce);
 
-            disableObstacles(); 
+            disableObstacles();
+
+            gameOverSfx.Play();
         }
     }
 
