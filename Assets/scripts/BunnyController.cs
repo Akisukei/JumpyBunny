@@ -33,33 +33,48 @@ public class BunnyController : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Title");
+        }
+
         if (bunnyHurtTime == -1)
         {
-            if (Input.GetButtonUp("Jump") && jumpsRemaining > 0)
-            {
-                if (jumpsRemaining == 1)
-                {
-                    bunnyRigidBody.velocity = Vector2.zero;
-                    jumpSfx2.Play();
-                }
-                else
-                {
-                    jumpSfx1.Play();
-                }
-
-                jumpsRemaining--;
-                bunnyRigidBody.AddForce(transform.up * jumpForce);
-            }
-
-            bunnyAnimator.SetFloat("vVelocity", bunnyRigidBody.velocity.y);
-            scoreTxt.text = (Time.time - startingTime).ToString("0.0");
+            detectJump();
         }
         else
         {
-            if(Time.time > bunnyHurtTime + 2)   // after 2 seconds of hit
+            onDeath();
+        }
+    }
+
+    private void detectJump()
+    {
+        if (Input.GetButtonUp("Jump") && jumpsRemaining > 0)
+        {
+            if (jumpsRemaining == 1)
             {
-                SceneManager.LoadScene("Game");
+                bunnyRigidBody.velocity = Vector2.zero;
+                jumpSfx2.Play();
             }
+            else
+            {
+                jumpSfx1.Play();
+            }
+
+            jumpsRemaining--;
+            bunnyRigidBody.AddForce(transform.up * jumpForce);
+        }
+
+        bunnyAnimator.SetFloat("vVelocity", bunnyRigidBody.velocity.y);
+        scoreTxt.text = (Time.time - startingTime).ToString("0.0");
+    }
+
+    private void onDeath()
+    {
+        if (Time.time > bunnyHurtTime + 2)   // after 2 seconds of hit
+        {
+            SceneManager.LoadScene("Game");
         }
     }
 
