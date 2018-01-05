@@ -19,6 +19,7 @@ public class BunnyController : MonoBehaviour {
     public AudioSource jumpSfx2;
     public AudioSource gameOverSfx;
     public Text scoreTxt;
+    public Text bestScoreTxt;
 
 	// Use this for initialization
 	void Start ()
@@ -28,6 +29,7 @@ public class BunnyController : MonoBehaviour {
         this.bunnyCollider = GetComponent<Collider2D>();
 
         startingTime = Time.time;
+        bestScoreTxt.text = PlayerPrefs.GetFloat("BestScore", 0).ToString("0.0");
 	}
 	
 	// Update is called once per frame
@@ -74,6 +76,12 @@ public class BunnyController : MonoBehaviour {
     {
         if (Time.time > bunnyHurtTime + 2)   // after 2 seconds of hit
         {
+            float currentScore = float.Parse(scoreTxt.text);
+            if(currentScore > PlayerPrefs.GetFloat("BestScore", 0))
+            {
+                PlayerPrefs.SetFloat("BestScore", currentScore);
+            }
+
             SceneManager.LoadScene("Game");
         }
     }
