@@ -50,7 +50,7 @@ public class BunnyController : MonoBehaviour {
 
     private void detectJump()
     {
-        if (Input.GetButtonUp("Jump") && jumpsRemaining > 0)
+        if ((Input.GetButtonUp("Jump") || Input.GetButtonUp("Fire1")) && jumpsRemaining > 0)
         {
             if (jumpsRemaining == 1)
             {
